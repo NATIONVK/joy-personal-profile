@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#070b18">
+<meta name="description" content="Joy Ahmed — Statistics student, curious learner, programmer, and future data professional.">
+<title>Joy Ahmed | Personal Profile</title>
+<style>
+:root{--bg:#070b18;--panel:rgba(15,23,42,.78);--line:rgba(103,232,249,.22);--cyan:#67e8f9;--violet:#c4b5fd;--pink:#f9a8d4;--muted:#a7b4cc;--text:#edf5ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 15% 5%,#15254b 0,transparent 35%),radial-gradient(ellipse at 85% 75%,#251348 0,transparent 32%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.17;background-image:linear-gradient(rgba(103,232,249,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,249,.12) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(to bottom,#000,transparent 85%)}
+button,input{font:inherit}.shell{width:min(100% - 28px,1000px);margin:auto;padding:22px 0 32px;position:relative}.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}.brand{font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);font-weight:800}.counter{font-size:.82rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:8px 12px;background:#0b1224}
+.progress{height:4px;background:#18233c;border-radius:99px;overflow:hidden;margin-bottom:18px}.progress span{display:block;height:100%;width:5%;background:linear-gradient(90deg,var(--cyan),var(--violet),var(--pink));transition:width .25s ease}
+.page{display:none;animation:enter .3s ease}.page.active{display:block}@keyframes enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.hero,.card{background:var(--panel);border:1px solid var(--line);border-radius:22px;box-shadow:0 18px 60px rgba(0,0,0,.22);backdrop-filter:blur(14px)}.hero{padding:clamp(22px,5vw,48px);min-height:450px;display:flex;flex-direction:column;justify-content:center;overflow:hidden;position:relative}.hero:after{content:"";position:absolute;width:250px;height:250px;right:-90px;top:-90px;border-radius:50%;border:1px solid rgba(103,232,249,.22);box-shadow:0 0 0 25px rgba(103,232,249,.025),0 0 0 55px rgba(196,181,253,.025);pointer-events:none}
+.eyebrow{color:var(--cyan);font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800}.hero-grid{display:grid;grid-template-columns:1.5fr .8fr;gap:28px;align-items:center}.hero h1{font-size:clamp(2.5rem,8vw,5.3rem);line-height:.98;margin:14px 0 18px;letter-spacing:-.055em}.gradient{background:linear-gradient(100deg,#fff,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}.lead{color:#c7d4e9;line-height:1.8;max-width:660px}.quote{color:var(--pink);font-style:italic;border-left:2px solid var(--pink);padding-left:14px;margin-top:24px;line-height:1.7}.avatar-wrap{display:flex;flex-direction:column;align-items:center;gap:12px}.avatar{width:min(220px,55vw);aspect-ratio:1;border-radius:50%;border:1px solid rgba(103,232,249,.5);padding:7px;background:linear-gradient(145deg,rgba(103,232,249,.18),rgba(196,181,253,.08));box-shadow:0 0 45px rgba(103,232,249,.12)}.avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;background:#101a31}.upload-label{display:inline-flex;align-items:center;gap:8px;color:var(--cyan);border:1px solid var(--line);border-radius:999px;padding:9px 13px;font-size:.82rem;cursor:pointer}.upload-label input{display:none}
+.page-head{padding:clamp(22px,4vw,36px);margin-bottom:16px}.page-head h2{font-size:clamp(1.8rem,5vw,3rem);margin:10px 0}.page-head p{color:#c7d4e9;line-height:1.8;margin:0}.content{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{padding:20px;min-width:0}.card h3{margin:0 0 10px;color:var(--cyan);font-size:1.03rem}.card p,.card li{color:#c7d4e9;line-height:1.75}.card p:last-child{margin-bottom:0}.card ul{padding-left:20px;margin:8px 0 0}.wide{grid-column:1/-1}.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.tag{font-size:.78rem;border:1px solid var(--line);background:rgba(103,232,249,.06);padding:7px 10px;border-radius:999px;color:#c7f7ff}.timeline{display:grid;gap:12px}.timeline-item{border-left:2px solid var(--cyan);padding:3px 0 5px 15px}.timeline-item strong{display:block}.timeline-item small{color:var(--muted)}.stat{font-size:1.6rem;font-weight:850;color:var(--cyan);margin:4px 0}.muted{color:var(--muted)!important}.navigation{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:18px}.nav-btn{border:1px solid var(--line);border-radius:12px;padding:12px 18px;color:var(--text);background:rgba(14,23,43,.9);cursor:pointer;transition:.2s}.nav-btn:hover:not(:disabled){border-color:var(--cyan);box-shadow:0 0 24px rgba(103,232,249,.12);transform:translateY(-1px)}.nav-btn.primary{background:linear-gradient(100deg,#164e63,#373078);border-color:rgba(103,232,249,.4)}.nav-btn:disabled{opacity:.35;cursor:not-allowed}.nav-note{font-size:.78rem;color:var(--muted);text-align:center}.footer{text-align:center;color:#8291ac;font-size:.78rem;padding:24px 0 0}.footer strong{color:var(--cyan)}.contact-link{color:var(--cyan);text-decoration:none;overflow-wrap:anywhere}.callout{border:1px solid rgba(249,168,212,.28);background:rgba(249,168,212,.05);padding:15px;border-radius:14px;color:#fbcfe8;line-height:1.7}.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.mini{padding:14px;border:1px solid var(--line);border-radius:14px;background:rgba(7,15,32,.55)}.mini b{display:block;color:var(--violet);margin-bottom:6px}.mini span{font-size:.86rem;color:#c7d4e9;line-height:1.6}
+@media(max-width:700px){.hero-grid{grid-template-columns:1fr}.avatar-wrap{grid-row:1}.hero{text-align:left;min-height:0}.avatar{width:145px}.content{grid-template-columns:1fr}.wide{grid-column:auto}.mini-grid{grid-template-columns:1fr}.topbar{align-items:flex-start}.nav-btn{padding:11px 13px}.nav-note{max-width:100px}.page-head{padding:22px}.card{padding:17px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar"><div class="brand">DCU Statistics · Titumir Campus</div><div class="counter" id="counter">PAGE 01 / 20</div></header>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <main id="pages">
+    <section class="page active" data-title="Home">
+      <div class="hero">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">Personal Profile · Welcome to my world</div>
+            <h1><span class="gradient">Joy Ahmed</span></h1>
+            <p class="lead">Statistics undergraduate · Curious learner · Programmer in progress</p>
+            <p class="lead">আমি Joy Ahmed। শেখা, Programming, Problem Solving এবং Technology নিয়ে কৌতূহল থেকে নিজের ভবিষ্যৎ গড়ে তুলতে চাই। এই ওয়েবসাইটে আমার শিক্ষাজীবন, আগ্রহ, প্রজেক্ট ও লক্ষ্য তুলে ধরা হয়েছে।</p>
+            <div class="tag-row"><span class="tag">Statistics</span><span class="tag">Programming</span><span class="tag">Cyber Security</span><span class="tag">Data Science</span></div>
+            <p class="quote">“আমি যেমন, আমি তেমনি—আমি কোনো পরীক্ষার খাতা না।”</p>
+          </div>
+          <div class="avatar-wrap">
+            <div class="avatar"><img id="profilePhoto" alt="Joy Ahmed profile photo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%230e7490'/%3E%3Cstop offset='1' stop-color='%234c1d95'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='300' height='300' fill='%230b1224'/%3E%3Ccircle cx='150' cy='112' r='58' fill='url(%23g)'/%3E%3Cpath d='M48 300 Q52 192 150 192 Q248 192 252 300' fill='url(%23g)'/%3E%3Ctext x='150' y='280' font-size='20' fill='white' text-anchor='middle' font-family='Arial'>JOY</text%3E%3C/svg%3E"></div>
+            <label class="upload-label">＋ Add / Change Photo<input id="photoUpload" type="file" accept="image/*"></label>
+            <span class="muted" style="font-size:.75rem">Photo option appears on this page only</span>
+          </div>
+        </div>
+      </div>
+      <div class="content" style="margin-top:14px">
+        <article class="card"><h3>Currently</h3><p>1st Year Undergraduate · Department of Statistics</p><p class="muted">Dhaka Central University (DCU), Titumir Campus</p></article>
+        <article class="card"><h3>My Direction</h3><p>Build a strong foundation in Statistics, Programming and Data Analysis, then use those skills to shape a meaningful career.</p></article>
+      </div>
+    </section>
+
+    <section class="page" data-title="About Me">
+      <div class="hero page-head"><div class="eyebrow">Page 02 · Who I Am</div><h2>About <span class="gradient">Me</span></h2><p>আমি কৌতূহলী একজন শিক্ষার্থী, যে নতুন কিছু জানতে, সমস্যা সমাধান করতে এবং Programming-এর মাধ্যমে নিজের চিন্তাকে বাস্তবে রূপ দিতে পছন্দ করে।</p></div>
+      <div class="content">
+        <article class="card"><h3>My Personality</h3><ul><li><b>Curious Mind:</b> নতুন কিছু জানার প্রতি আগ্রহী।</li><li><b>Problem Solver:</b> সমস্যার কারণ বুঝে সমাধান খুঁজতে ভালো লাগে।</li><li><b>Tech Enthusiast:</b> Programming ও Cyber Security নিয়ে শেখার আগ্রহ আছে।</li></ul></article>
+        <article class="card"><h3>My Interests</h3><div class="tag-row"><span class="tag">Programming</span><span class="tag">Problem Solving</span><span class="tag">Cyber Security</span><span class="tag">Statistics</span><span class="tag">Data Analysis</span></div></article>
+        <article class="card wide"><h3>My Personal Tagline</h3><p class="quote">“আমি যেমন, আমি তেমনি—আমি কোনো পরীক্ষার খাতা না।”</p><p>নিজের পরিচয় নিজের মতো করে গড়ে তোলা, শেখার স্বাধীনতা ধরে রাখা এবং নিজের দক্ষতা দিয়ে এগিয়ে যাওয়াই আমার কাছে গুরুত্বপূর্ণ।</p></article>
+      </div>
+    </section>
+
+    <section class="page" data-title="My Story">
+      <div class="hero page-head"><div class="eyebrow">Page 03 · My Story & Values</div><h2>My Story <span class="gradient">& Values</span></h2><p>শেখা, নিজেকে আবিষ্কার করা এবং নিজের ভবিষ্যৎ গড়ে তোলার পথে আমি এখনো এগিয়ে চলেছি।</p></div>
+      <div class="content">
+        <article class="card"><h3>What Defines Me</h3><ul><li>কৌতূহল—প্রশ্ন করতে ও নতুন কিছু জানতে ভালো লাগে।</li><li>সততা—মিথ্যা আমার কাছে গ্রহণযোগ্য নয়।</li><li>শেখা—Programming দিয়ে বাস্তব সমস্যার সমাধান করতে চাই।</li><li>নিজের ভবিষ্যৎ নিজের যোগ্যতায় গড়তে চাই।</li></ul></article>
+        <article class="card"><h3>My Biggest Dream</h3><p class="stat">A Successful Career</p><p>নিজের পছন্দের ক্ষেত্রে দক্ষ হয়ে একটি সফল ক্যারিয়ার গড়ে তোলা। শেখা জ্ঞানকে কাজে লাগিয়ে বাস্তব জীবনে নিজের অবস্থান তৈরি করাই আমার লক্ষ্য।</p></article>
+        <article class="card wide"><h3>My Philosophy</h3><p class="quote">“নিজের ভবিষ্যৎ গড়ার সবচেয়ে ভালো সময় হলো আজ—আর সবচেয়ে বড় বিনিয়োগ হলো নিজের দক্ষতা।”</p></article>
+      </div>
+    </section>
+
+    <section class="page" data-title="Education">
+      <div class="hero page-head"><div class="eyebrow">Page 04 · Academic Journey</div><h2>Education & <span class="gradient">Academic Journey</span></h2><p>আমার শিক্ষাজীবন নতুন জ্ঞান অর্জন, নিজের দক্ষতা তৈরি এবং ভবিষ্যতের জন্য প্রস্তুত হওয়ার যাত্রা।</p></div>
+      <div class="content">
+        <article class="card"><h3>Secondary School Certificate (SSC)</h3><p><b>মাহমুদাবাদ রাজি উদ্দিন আহমেদ রাজু উচ্চ বিদ্যালয়</b></p><p class="muted">2022</p><p class="stat">GPA 5.00</p></article>
+        <article class="card"><h3>Higher Secondary Certificate (HSC)</h3><p><b>National College of Education</b></p><p class="muted">2024</p><p class="stat">GPA 5.00</p></article>
+        <article class="card wide"><h3>Undergraduate Education</h3><p><b>Dhaka Central University (DCU)</b><br>Titumir Campus · Department of Statistics</p><p class="tag-row"><span class="tag">1st Year Undergraduate</span></p></article>
+      </div>
+    </section>
+
+    <section class="page" data-title="Statistics Journey">
+      <div class="hero page-head"><div class="eyebrow">Page 05 · My Academic Field</div><h2>Statistics <span class="gradient">Journey</span></h2><p>Statistics আমার কাছে শুধু সংখ্যা বা সূত্র নয়; এটি তথ্য বিশ্লেষণ, অনিশ্চয়তা বোঝা এবং যুক্তিসংগত সিদ্ধান্ত নেওয়ার একটি উপায়।</p></div>
+      <div class="content">
+        <article class="card"><h3>01 · Build the Foundation</h3><p>Statistics-এর মৌলিক ধারণা, Data Types, Descriptive Statistics, Probability এবং প্রয়োজনীয় Mathematics শেখা।</p></article>
+        <article class="card"><h3>02 · Learn Through Programming</h3><p>Python ও Excel দিয়ে শেখা বিষয়গুলো প্রয়োগ করা এবং Data Analysis-এর ভিত্তি তৈরি করা।</p></article>
+        <article class="card"><h3>03 · Work with Real Data</h3><p>বাস্তব ডেটা পরিষ্কার, বিশ্লেষণ ও ব্যাখ্যা করে অর্থপূর্ণ সিদ্ধান্তে পৌঁছানোর চেষ্টা করা।</p></article>
+        <article class="card"><h3>04 · Build a Career</h3><p>Statistics, Data Science বা সংশ্লিষ্ট প্রযুক্তিগত ক্ষেত্রে দক্ষতা অনুযায়ী ক্যারিয়ার গড়ে তোলা।</p></article>
+        <article class="card wide"><h3>My Vision</h3><p class="quote">“শুধু ডেটা দেখাই নয়—ডেটার ভেতরে লুকিয়ে থাকা অর্থ খুঁজে বের করাই আমার লক্ষ্য।”</p></article>
+      </div>
+    </section>
+
+    <section class="page" data-title="Academic Goals">
+      <div class="hero page-head"><div class="eyebrow">Page 06 · My Mission</div><h2>Academic <span class="gradient">Goals</span></h2><p>শুধু ডিগ্রি অর্জন নয়; Statistics-এ শক্ত ভিত্তি, ভালো একাডেমিক ফলাফল এবং বাস্তব জীবনে কাজে লাগে এমন দক্ষতা গড়ে তোলাই আমার লক্ষ্য।</p></div>
+      <div class="content">
+        <article class="card"><h3>Academic Excellence</h3><p>নিয়মিত পড়াশোনা, নোট তৈরি, অনুশীলন এবং নিজেকে পরীক্ষা করার মাধ্যমে ভালো ফলাফল অর্জনের চেষ্টা করব।</p></article>
+        <article class="card"><h3>Technical Skills</h3><div class="tag-row"><span class="tag">Python</span><span class="tag">Excel</span><span class="tag">Data Analysis</span><span class="tag">Problem Solving</span></div></article>
+        <article class="card"><h3>Practical Experience</h3><p>ছোট প্রজেক্ট ও বাস্তব ডেটা নিয়ে কাজ করে শেখা বিষয়গুলো প্রয়োগ করতে চাই।</p></article>
+        <article class="card"><h3>Higher Studies</h3><p>Bachelor’s শেষে বিদেশে fully funded Master's scholarship অর্জনের জন্য প্রস্তুতি নিতে চাই।</p></article>
+      </div>
+    </section>
+
+    <section class="page" data-title="My Vision">
+      <div class="hero page-head"><div class="eyebrow">Page 07 · The Future I Want to Build</div><h2>My <span class="gradient">Vision</span></h2><p>আমার স্বপ্ন হলো নিজের জ্ঞান, দক্ষতা ও পরিশ্রম দিয়ে একটি সফল ক্যারিয়ার গড়ে তোলা।</p></div>
+      <div class="content">
+        <article class="card"><h3>Data Science & Analytics</h3><p>Statistics, Mathematics এবং Programming-এর সমন্বয়ে Data Science, Data Analytics অথবা উপযুক্ত কোনো প্রযুক্তিগত পেশায় এগোতে চাই।</p></article>
+        <article class="card"><h3>Programming & Cyber Security</h3><p>Problem-solving-এর আগ্রহ কাজে লাগিয়ে Programming ও Cyber Security সম্পর্কে গভীর জ্ঞান অর্জন করতে চাই।</p></article>
+        <article class="card wide"><h3>My Three Steps</h3><div class="mini-grid"><div class="mini"><b>01 · Learn</b><span>মৌলিক জ্ঞান ও দক্ষতা অর্জন।</span></div><div class="mini"><b>02 · Build</b><span>প্রজেক্ট তৈরি ও বাস্তব সমস্যা সমাধান।</span></div><div class="mini"><b>03 · Grow</b><span>দক্ষতা কাজে লাগিয়ে ক্যারিয়ার গড়া।</span></div></div></article>
+        <article class="card wide"><p class="quote">“আমার লক্ষ্য শুধু সফল হওয়া নয়; নিজের যোগ্যতায় এমন একটি ভবিষ্যৎ তৈরি করা, যা নিয়ে আমি গর্ব করতে পারি।”</p></article>
+      </div>
+    </section>
+
+    <section class="page" data-title="Skills">
+      <div class="hero page-head"><div class="eyebrow">Page 08 · Skills & Expertise</div><h2>Skills & <span class="gradient">Expertise</span></h2><p>এখানে আমার আগ্রহের ক্ষেত্র এবং ধাপে ধাপে গড়ে তুলতে চাওয়া দক্ষতাগুলো তুলে ধরা হয়েছে। আগ্রহকে দক্ষতায় পরিণত করতে নিয়মিত অনুশীলনই সবচেয়ে গুরুত্বপূর্ণ।</p></div>
+      <div class="content">
+        <article class="card"><h3>Current Learning Focus</h3><ul><li>Statistics fundamentals</li><li>Mathematics foundations</li><li>Programming basics</li><li>English communication</li></ul></article>
+        <article class="card"><h3>Skills to Develop</h3><div class="tag-row"><span class="tag">Python</span><span class="tag">Excel</span><span class="tag">SQL</span><span class="tag">Data Visualization</span><span class="tag">Git & GitHub</span><span class="tag">Cyber Security Basics</span></div></article>
+        <article class="card wide"><h3>My Approach</h3><p>কোনো দক্ষতাকে অর্জিত বলে দাবি করার আগে সেটি বাস্তবে প্রয়োগ করতে চাই। তাই এই তালিকাটি আমার শেখার দিকনির্দেশনা—অর্জনের চূড়ান্ত দাবি নয়।</p></article>
+      </div>
+    </section>
+
+    <section class="page" data-title="Learning Roadmap">
+      <div class="hero page-head"><div class="eyebrow">Page 09 · Step by Step</div><h2>Learning <span class="gradient">Roadmap</span></h2><p>শূন্য থেকে শুরু করে ধাপে ধাপে Statistics, Mathematics, Programming ও Data Analysis শেখার পরিকল্পনা।</p></div>
+      <div class="content">
+        <article class="card"><h3>Phase 01 · Foundation</h3><p>Statistics basics, algebra, functions, probability, descriptive statistics এবং basic calculus।</p></article>
+        <article class="card"><h3>Phase 02 · Tools</h3><p>Python basics, spreadsheets, data cleaning এবং visualization-এর প্রাথমিক ধারণা।</p></article>
+        <article class="card"><h3>Phase 03 · Practice</h3><p>ছোট dataset, guided exercises, mini-projects এবং GitHub-এ কাজ সাজিয়ে রাখা।</p></article>
+        <article class="card"><h3>Phase 04 · Career Preparation</h3><p>Portfolio, communication, internship opportunities এবং scholarship requirements সম্পর্কে প্রস্তুতি।</p></article>
+        <article class="card wide"><div class="callout">এই roadmap একটি প্রাথমিক পরিকল্পনা। বিশ্ববিদ্যালয়ের সিলেবাস, শেখার অগ্রগতি এবং সুযোগ অনুযায়ী এটি আপডেট করা হবে।</div></article>
+      </div>
+    </section>
+
+    <section class="page" data-title="Projects Portfolio">
+      <div class="hero page-head"><div class="eyebrow">Page 10 · Build, Learn, Improve</div><h2>Projects <span class="gradient">Portfolio</span></h2><p>প্রজেক্টের মাধ্যমে শেখা জ্ঞানকে বাস্তবে প্রয়োগ করা এবং নিজের অগ্রগতি দেখানোর জায়গা।</p></div>
+      <div class="content">
+        <article class="card"><h3>Personal Profile Website</h3><p>বাংলা ও English-এ নিজের পরিচয়, শিক্ষাজীবন, আগ্রহ ও লক্ষ্য তুলে ধরার জন্য futuristic portfolio website।</p><span class="tag">Web Development</span></article>
+        <article class="card"><h3>StudentOS</h3><p>Routine, assignments, notes, study progress, Pomodoro এবং expense tracking নিয়ে একটি student ecosystem-এর পরিকল্পনা।</p><span class="tag">Student Productivity</span></article>
+        <article class="card wide"><h3>Future Project Ideas</h3><ul><li>Beginner statistical analysis project</li><li>Python-based data exploration</li><li>Student productivity tools</li><li>Cyber security learning labs in legal, authorized environments</li></ul><p class="muted">প্রজেক্ট সম্পন্ন হলে এখানে repository link, screenshots ও বিস্তারিত যোগ করা যাবে।</p></article>
+      </div>
+    </section>
+
+    <section class="page" data-title="StudentOS">
+      <div class="hero page-head"><div class="eyebrow">Page 11 · Student Ecosystem</div><h2><span class="gradient">StudentOS</span></h2><p>শিক্ষার্থীদের দৈনন্দিন পড়াশোনা ও পরিকল্পনাকে এক জায়গায় সহজভাবে পরিচালনার একটি project idea।</p></div>
+      <div class="content">
+        <article class="card"><h3>Core Features</h3><ul><li>Class routine and schedule</li><li>Assignment and exam tracker</li><li>Notes, images and PDF storage</li><li>Study progress and Pomodoro timer</li><li>Tuition and daily expense tracker</li></ul></article>
+        <article class="card"><h3>Design Principles</h3><p>বাংলা ও English interface, user-friendly navigation, responsive design, clear sections এবং ব্যবহারকারীর তথ্যের নিরাপত্তা।</p></article>
+        <article class="card wide"><h3>Project Status</h3><p>StudentOS বর্তমানে পরিকল্পনা ও উন্নয়নের ধারণা হিসেবে উপস্থাপিত। ভবিষ্যতে কাজ এগোলে feature list, screenshots, live demo ও source code link যোগ করা যাবে।</p></article>
+      </div>
+    </section>
+
+    <section class="page" data-title="GitHub">
+      <div class="hero page-head"><div class="eyebrow">Page 12 · My Developer Corner</div><h2>GitHub <span class="gradient">Profile</span></h2><p>Code, experiments, learning projects এবং development journey এক জায়গায় গুছিয়ে রাখার জায়গা।</p></div>
+      <div class="content">
+        <article class="card"><h3>Username</h3><p class="stat">NATIONVK</p><p><a class="contact-link" href="https://github.com/NATIONVK" target="_blank" rel="noopener noreferrer">Visit github.com/NATIONVK ↗</a></p></article>
+        <article class="card"><h3>What I Want to Share</h3><ul><li>Web projects</li><li>StudentOS development</li><li>Python practice</li><li>Statistics and data projects</li></ul></article>
+        <article class="card wide"><h3>My Developer Mindset</h3><p>শুধু কোড লেখা নয়—সমস্যা বোঝা, সমাধান পরীক্ষা করা, ভুল থেকে শেখা এবং কাজকে ধীরে ধীরে উন্নত করাই আমার development journey-এর অংশ।</p></article>
+      </div>
+    </section>
+
+    <section class="page" data-title="Achievements">
+      <div class="hero page-head"><div class="eyebrow">Page 13 · Milestones</div><h2>Achievements & <span class="gradient">Milestones</span></h2><p>আমার একাডেমিক অর্জন এবং শেখার যাত্রায় গুরুত্বপূর্ণ মাইলফলক। এই পেজে যাচাইযোগ্য অর্জনগুলোই রাখা হবে।</p></div>
+      <div class="content">
+        <article class="card"><h3>SSC · 2022</h3><p class="stat">GPA 5.00</p><p class="muted">Secondary School Certificate</p></article>
+        <article class="card"><h3>HSC · 2024</h3><p class="stat">GPA 5.00</p><p class="muted">Higher Secondary Certificate</p></article>
+        <article class="card wide"><h3>Milestones in Progress</h3><ul><li>Build a strong Statistics foundation</li><li>Complete first Python project</li><li>Publish projects on GitHub</li><li>Prepare a competitive scholarship profile</li></ul><p class="muted">ভবিষ্যতে অর্জন সম্পন্ন হলে তারিখ ও প্রমাণ/লিংক যোগ করা যাবে।</p></article>
+      </div>
+    </section>
+
+    <section class="page" data-title="Scholarship Goals">
+      <div class="hero page-head"><div class="eyebrow">Page 14 · International Study Goal</div><h2>Scholarship <span class="gradient">Goals</span></h2><p>Bachelor’s degree শেষ করে বিদেশে fully funded Master's scholarship অর্জনের জন্য এখন থেকেই প্রস্তুতি গড়ে তোলা।</p></div>
+      <div class="content">
+        <article class="card"><h3>Academic Profile</h3><p>SSC GPA 5.00 এবং HSC GPA 5.00। বর্তমানে Statistics-এ undergraduate study করছি।</p></article>
+        <article class="card"><h3>What I Need to Build</h3><ul><li>Strong bachelor’s CGPA</li><li>Relevant projects and experience</li><li>English proficiency</li><li>Academic references and application documents</li></ul></article>
+        <article class="card wide"><h3>My Strategy</h3><p>প্রথম বর্ষ থেকেই একাডেমিক ভিত্তি, technical skills, project portfolio এবং scholarship research-এ ধারাবাহিকভাবে কাজ করতে চাই। Funding-এর শর্ত প্রতিটি বিশ্ববিদ্যালয় ও scholarship অনুযায়ী যাচাই করতে হবে।</p><p class="quote">“আজকের প্রস্তুতিই আগামী দিনের সুযোগ তৈরি করে।”</p></article>
+      </div>
+    </section>
+
+    <section class="page" data-title="Interests">
+      <div class="hero page-head"><div class="eyebrow">Page 15 · Beyond the Classroom</div><h2>Interests & <span class="gradient">Hobbies</span></h2><p>যেসব বিষয় আমাকে কৌতূহলী রাখে, নতুন কিছু শিখতে উৎসাহ দেয় এবং সমস্যা সমাধানে আগ্রহী করে।</p></div>
+      <div class="content">
+        <article class="card"><h3>Programming</h3><p>কোডের মাধ্যমে সমস্যা সমাধান, নতুন ধারণা পরীক্ষা করা এবং ছোট tools তৈরি করা আমার প্রধান শখগুলোর একটি।</p></article>
+        <article class="card"><h3>Cyber Security</h3><p>সিস্টেম কীভাবে কাজ করে, কীভাবে সুরক্ষিত রাখা যায় এবং অনুমোদিত পরিবেশে নিরাপত্তা শেখার বিষয়ে আগ্রহী।</p></article>
+        <article class="card"><h3>Statistics & Data</h3><p>ডেটা থেকে প্যাটার্ন খুঁজে পাওয়া, তথ্য বিশ্লেষণ এবং সিদ্ধান্তের পেছনের যুক্তি বোঝার আগ্রহ রয়েছে।</p></article>
+        <article class="card"><h3>Building for Students</h3><p>শিক্ষার্থীদের কাজে লাগতে পারে এমন ওয়েবসাইট ও StudentOS-এর মতো project idea নিয়ে ভাবতে ভালো লাগে।</p></article>
+      </div>
+    </section>
+
+    <section class="page" data-title="Philosophy">
+      <div class="hero page-head"><div class="eyebrow">Page 16 · Principles I Live By</div><h2>Personal <span class="gradient">Philosophy</span></h2><p>নিজের পরিচয়, সততা, কৌতূহল এবং ভবিষ্যৎ গড়ার বিষয়ে আমার ব্যক্তিগত ভাবনা।</p></div>
+      <div class="content">
+        <article class="card"><h3>Be Curious</h3><p>প্রশ্ন করা এবং নতুন কিছু শেখার আগ্রহ ধরে রাখতে চাই।</p></article>
+        <article class="card"><h3>Value Honesty</h3><p>মিথ্যা আমার কাছে গ্রহণযোগ্য নয়। সম্পর্ক ও কাজ—দুই ক্ষেত্রেই সততাকে গুরুত্ব দিতে চাই।</p></article>
+        <article class="card"><h3>Learn by Doing</h3><p>শুধু তত্ত্ব নয়, শেখা বিষয়কে বাস্তব কাজ ও প্রজেক্টে প্রয়োগ করতে চাই।</p></article>
+        <article class="card"><h3>Own My Journey</h3><p>নিজের গতিতে এগিয়ে গিয়ে নিজের যোগ্যতায় ভবিষ্যৎ গড়তে চাই।</p></article>
+        <article class="card wide"><p class="quote">“আমি যেমন, আমি তেমনি—আমি কোনো পরীক্ষার খাতা না।”</p></article>
+      </div>
+    </section>
+
+    <section class="page" data-title="Books & Resources">
+      <div class="hero page-head"><div class="eyebrow">Page 17 · Keep Learning</div><h2>Books & <span class="gradient">Resources</span></h2><p>আমার পড়াশোনা ও self-learning-কে সহায়তা করবে এমন বই, কোর্স এবং reference resources-এর সংগ্রহ।</p></div>
+      <div class="content">
+        <article class="card"><h3>Statistics & Mathematics</h3><p>বিশ্ববিদ্যালয়ের prescribed textbooks, class notes, solved examples এবং practice problems-কে অগ্রাধিকার দেব।</p></article>
+        <article class="card"><h3>Programming</h3><p>Python documentation, beginner tutorials, coding exercises এবং ছোট project-based learning।</p></article>
+        <article class="card"><h3>Data Analysis</h3><p>Excel, Python data libraries, visualization tutorials এবং open datasets নিয়ে অনুশীলন।</p></article>
+        <article class="card"><h3>Cyber Security</h3><p>Networking ও security fundamentals, reputable learning labs এবং কেবল অনুমোদিত practice environments।</p></article>
+        <article class="card wide"><h3>Resource Library</h3><p class="muted">নির্দিষ্ট বই, course ও link বাছাই হলে এখানে title, author/provider, topic এবং URL যোগ করা যাবে।</p></article>
+      </div>
+    </section>
+
+    <section class="page" data-title="Gallery">
+      <div class="hero page-head"><div class="eyebrow">Page 18 · Moments & Memories</div><h2>My <span class="gradient">Gallery</span></h2><p>আমার শিক্ষাজীবন, প্রজেক্ট এবং যাত্রার উল্লেখযোগ্য মুহূর্তগুলো রাখার জন্য একটি জায়গা।</p></div>
+      <div class="content">
+        <article class="card"><h3>Academic Moments</h3><p>বিশ্ববিদ্যালয়, ক্লাস, পড়াশোনা ও শিক্ষাজীবনের স্মরণীয় মুহূর্তের ছবি এখানে যোগ করা যাবে।</p></article>
+        <article class="card"><h3>Project Showcase</h3><p>Website screenshots, StudentOS progress, coding setup এবং completed project-এর ছবি দেখানো যাবে।</p></article>
+        <article class="card wide"><div class="callout">এই পেজে এখন কোনো ছবি আপলোডের control রাখা হয়নি। কনটেন্ট ও gallery item পরে নির্ধারণ করা যাবে; profile photo পরিবর্তনের অপশন শুধু Home page-এ থাকবে।</div></article>
+      </div>
+    </section>
+
+    <section class="page" data-title="Future Plans">
+      <div class="hero page-head"><div class="eyebrow">Page 19 · Where I’m Going</div><h2>Future <span class="gradient">Plans</span></h2><p>দীর্ঘমেয়াদি লক্ষ্যকে ছোট, বাস্তবসম্মত ধাপে ভাগ করে সামনে এগিয়ে যাওয়ার পরিকল্পনা।</p></div>
+      <div class="content">
+        <article class="card"><h3>Near Term</h3><ul><li>Statistics foundation strong করা</li><li>Mathematics নিয়মিত অনুশীলন</li><li>Python ও Excel শেখা</li></ul></article>
+        <article class="card"><h3>Next Stage</h3><ul><li>Data analysis mini-project</li><li>GitHub portfolio উন্নত করা</li><li>StudentOS prototype তৈরি</li></ul></article>
+        <article class="card wide"><h3>Long-Term Direction</h3><ul><li>Bachelor’s degree-তে ভালো ফলাফল</li><li>Data Science বা related career-এর জন্য প্রস্তুতি</li><li>Fully funded Master's-এর জন্য আবেদন</li></ul><p class="muted">পরিকল্পনা অগ্রগতি ও বাস্তব সুযোগ অনুযায়ী পরিবর্তন হতে পারে।</p></article>
+      </div>
+    </section>
+
+    <section class="page" data-title="Contact">
+      <div class="hero page-head"><div class="eyebrow">Page 20 · Let’s Connect</div><h2>Contact <span class="gradient">& Connect</span></h2><p>শেখা, programming, Statistics এবং student-focused projects নিয়ে সংযোগ গড়ার শেষ পেজ।</p></div>
+      <div class="content">
+        <article class="card"><h3>GitHub</h3><p>আমার public coding journey ও project updates দেখার জন্য:</p><a class="contact-link" href="https://github.com/NATIONVK" target="_blank" rel="noopener noreferrer">github.com/NATIONVK ↗</a></article>
+        <article class="card"><h3>About Collaboration</h3><p>Programming, learning projects, student tools এবং data-related beginner projects নিয়ে ভবিষ্যতে সহযোগিতার সুযোগ খুঁজতে চাই।</p></article>
+        <article class="card wide"><h3>Contact Details</h3><p class="muted">Email, professional profile বা অন্য যোগাযোগের তথ্য যোগ করতে চাইলে পরে এই অংশে বসানো যাবে। Public website-এ ব্যক্তিগত ফোন নম্বর বা বাসার ঠিকানা প্রকাশ করার আগে গোপনীয়তার বিষয়টি বিবেচনা করো।</p><p class="quote">Thanks for visiting my profile. Keep learning. Keep building. Keep growing.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <nav class="navigation" aria-label="Page navigation">
+    <button class="nav-btn" id="prevBtn" type="button" disabled>← Previous</button>
+    <div class="nav-note" id="pageTitle" aria-live="polite">Home</div>
+    <button class="nav-btn primary" id="nextBtn" type="button">Next →</button>
+  </nav>
+  <footer class="footer">Designed for <strong>Joy Ahmed</strong> · DCU Statistics · Titumir Campus<br>Written By Joy(68) ~[Tc-Campus]</footer>
+</div>
+<script>
+(() => {
+  const pages = Array.from(document.querySelectorAll('.page'));
+  const counter = document.getElementById('counter');
+  const progressBar = document.getElementById('progressBar');
+  const title = document.getElementById('pageTitle');
+  const prev = document.getElementById('prevBtn');
+  const next = document.getElementById('nextBtn');
+  let current = 0;
+  function showPage(index) {
+    current = Math.max(0, Math.min(index, pages.length - 1));
+    pages.forEach((page, i) => {
+      page.classList.toggle('active', i === current);
+      page.setAttribute('aria-hidden', i === current ? 'false' : 'true');
+    });
+    counter.textContent = `PAGE ${String(current + 1).padStart(2, '0')} / ${String(pages.length).padStart(2, '0')}`;
+    progressBar.style.width = `${((current + 1) / pages.length) * 100}%`;
+    title.textContent = pages[current].dataset.title || `Page ${current + 1}`;
+    prev.disabled = current === 0;
+    next.textContent = current === pages.length - 1 ? 'Back to Home ↺' : 'Next →';
+    window.scrollTo({top: 0, behavior: 'smooth'});
+    history.replaceState(null, '', `#page-${String(current + 1).padStart(2, '0')}`);
+  }
+  prev.addEventListener('click', () => showPage(current - 1));
+  next.addEventListener('click', () => showPage(current === pages.length - 1 ? 0 : current + 1));
+  const photoInput = document.getElementById('photoUpload');
+  photoInput.addEventListener('change', event => {
+    const file = event.target.files && event.target.files[0];
+    if (!file) return;
+    if (!file.type.startsWith('image/')) { alert('Please choose an image file.'); return; }
+    const reader = new FileReader();
+    reader.onload = () => { document.getElementById('profilePhoto').src = reader.result; };
+    reader.readAsDataURL(file);
+  });
+  const match = location.hash.match(/^#page-(\d{1,2})$/);
+  if (match) showPage(Number(match[1]) - 1); else showPage(0);
+})();
+</script>
+</body>
+</html>
