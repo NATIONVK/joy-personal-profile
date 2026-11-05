@@ -1,117 +1,52 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080b14">
-  <meta name="description" content="Yeasien Ahmed — Joy. Statistics undergraduate, programmer, writer and curious learner.">
-  <meta property="og:title" content="Yeasien Ahmed — Joy | Portfolio">
-  <meta property="og:description" content="Curiosity. Code. Creativity. A personal portfolio by Joy.">
-  <title>Yeasien Ahmed — Joy | Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#080b14;--panel:#101725;--panel2:#121d2d;--line:rgba(167,190,220,.14);--text:#edf4ff;--muted:#98a8bf;--cyan:#70e1dc;--lime:#c8f169;--purple:#a99bff;--max:1120px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
-    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(112,225,220,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(112,225,220,.07) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(#000,transparent 85%);z-index:-2}
-    a{color:inherit}.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}.mono,.eyebrow,.nav-mark,.index{font-family:"DM Mono",monospace}.eyebrow{color:var(--cyan);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase}
-    .orb{position:absolute;border-radius:50%;filter:blur(1px);pointer-events:none;z-index:-1}.orb.one{width:430px;height:430px;right:-180px;top:70px;background:radial-gradient(circle,rgba(112,225,220,.13),transparent 68%)}.orb.two{width:360px;height:360px;left:-210px;top:850px;background:radial-gradient(circle,rgba(169,155,255,.12),transparent 70%)}
-    header{position:sticky;top:0;z-index:20;background:rgba(8,11,20,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-    .nav{height:74px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:.04em;text-decoration:none}.brand b{color:var(--cyan)}.nav-links{display:flex;gap:27px;align-items:center}.nav-links a{font-size:.85rem;color:var(--muted);text-decoration:none;transition:.2s}.nav-links a:hover{color:var(--cyan)}.menu{display:none;border:1px solid var(--line);background:var(--panel);color:var(--text);padding:9px 12px;border-radius:10px}
-    .hero{min-height:690px;display:grid;grid-template-columns:1.35fr .8fr;gap:60px;align-items:center;padding:90px 0 105px}.hero h1{font-size:clamp(3.5rem,8vw,6.8rem);line-height:.99;letter-spacing:-.075em;margin:20px 0}.hero h1 span{color:var(--cyan)}.hero-copy{max-width:650px;color:#b5c3d6;font-size:1.05rem}.hero-copy strong{color:var(--text)}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 18px;border-radius:12px;text-decoration:none;font-weight:800;font-size:.88rem;border:1px solid var(--line);transition:transform .2s,border-color .2s,background .2s}.btn:hover{transform:translateY(-3px);border-color:var(--cyan)}.btn.primary{background:var(--cyan);color:#071313;border-color:var(--cyan)}.btn.ghost{background:rgba(255,255,255,.025)}
-    .hero-card{position:relative;padding:30px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,rgba(18,29,45,.95),rgba(12,18,30,.92));box-shadow:0 30px 100px rgba(0,0,0,.25);overflow:hidden}.hero-card:after{content:"";position:absolute;width:190px;height:190px;right:-80px;top:-80px;border:1px solid rgba(112,225,220,.3);border-radius:50%;box-shadow:0 0 0 22px rgba(112,225,220,.025),0 0 0 48px rgba(112,225,220,.02)}.avatar{width:90px;height:90px;border-radius:22px;display:grid;place-items:center;background:linear-gradient(140deg,#1c5558,#33305f);border:1px solid rgba(112,225,220,.4);font-size:2rem;font-weight:800;color:white;margin-bottom:26px}.hero-card h2{margin:0 0 5px;font-size:1.45rem}.hero-card .role{color:var(--cyan);font-size:.85rem}.hero-card .line{height:1px;background:var(--line);margin:24px 0}.quick{display:flex;justify-content:space-between;gap:12px;margin:12px 0;font-size:.86rem}.quick span:first-child{color:var(--muted)}.quick span:last-child{text-align:right}
-    section{padding:88px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}.section-head h2{font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.06em;line-height:1.1;margin:9px 0 0}.section-head p{max-width:420px;color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{padding:26px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,rgba(16,23,37,.92),rgba(12,18,29,.92));transition:transform .25s,border-color .25s}.card:hover{transform:translateY(-5px);border-color:rgba(112,225,220,.42)}.card h3{margin:0 0 10px;font-size:1.08rem}.card p{margin:0;color:var(--muted);font-size:.93rem}.card .symbol{font-family:"DM Mono",monospace;color:var(--cyan);font-size:.8rem;margin-bottom:20px}.wide{grid-column:1/-1}
-    .interest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.interest{padding:20px 16px;border:1px solid var(--line);border-radius:15px;background:rgba(16,23,37,.7)}.interest strong{display:block;margin-bottom:4px}.interest span{color:var(--muted);font-size:.8rem}
-    .skill-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.skill{border:1px solid rgba(112,225,220,.2);background:rgba(112,225,220,.06);color:#c5f8f4;padding:8px 12px;border-radius:999px;font-size:.82rem}
-    .project-top{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:16px}.status{font: .7rem "DM Mono",monospace;color:var(--lime);border:1px solid rgba(200,241,105,.25);padding:5px 8px;border-radius:999px}.project-link{display:inline-block;margin-top:18px;color:var(--cyan);font-size:.85rem;text-decoration:none}.project-link:hover{text-decoration:underline}
-    .quote{padding:35px;border-left:2px solid var(--cyan);background:linear-gradient(90deg,rgba(112,225,220,.07),transparent);border-radius:0 16px 16px 0;font-size:clamp(1.2rem,3vw,1.8rem);letter-spacing:-.03em}.quote small{display:block;color:var(--muted);font: .75rem "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase;margin-top:15px}
-    .contact{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}.contact-copy{color:var(--muted);max-width:500px}.contact-links{display:grid;gap:10px}.contact-links a{display:flex;justify-content:space-between;gap:15px;padding:16px 18px;border:1px solid var(--line);border-radius:13px;text-decoration:none;background:rgba(16,23,37,.65);transition:.2s}.contact-links a:hover{border-color:var(--cyan);transform:translateX(4px)}.contact-links span:last-child{color:var(--cyan)}
-    footer{padding:28px 0 38px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}.footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.footer-inner strong{color:var(--cyan)}
-    .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
-    @media(max-width:800px){.hero{grid-template-columns:1fr;gap:35px;min-height:0;padding:75px 0}.hero-card{max-width:520px}.interest-grid{grid-template-columns:repeat(2,1fr)}.section-head{display:block}.section-head p{margin-top:14px}.contact{grid-template-columns:1fr}}
-    @media(max-width:600px){.wrap{width:min(var(--max),calc(100% - 30px))}.nav{height:66px}.menu{display:block}.nav-links{display:none;position:absolute;left:15px;right:15px;top:66px;padding:18px;background:#101725;border:1px solid var(--line);border-radius:14px;flex-direction:column;align-items:flex-start}.nav-links.open{display:flex}.hero h1{font-size:clamp(3.2rem,17vw,5rem)}section{padding:68px 0}.grid{grid-template-columns:1fr}.wide{grid-column:auto}.interest-grid{grid-template-columns:repeat(2,1fr)}.hero-card{padding:23px}.quote{padding:25px}}
-    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
-  </style>
-</head>
-<body>
-  <div class="orb one"></div><div class="orb two"></div>
-  <header><div class="wrap nav">
-    <a class="brand" href="#home">JOY<span><b>.</b></span></a>
-    <button class="menu" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
-    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
-      <a href="#about">About</a><a href="#interests">Interests</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
-    </nav>
-  </div></header>
-  <main>
-    <div class="wrap hero" id="home">
-      <div class="reveal">
-        <div class="eyebrow">Personal portfolio · Bangladesh</div>
-        <h1>Curious mind.<br><span>Creative</span> spirit.</h1>
-        <p class="hero-copy">Hey, I'm <strong>Yeasien Ahmed</strong> — most people know me as Joy. I'm a Statistics undergraduate who enjoys programming, writing, photography, and exploring ideas that make me think differently.</p>
-        <div class="hero-actions"><a class="btn primary" href="#projects">Explore my work <span>↗</span></a><a class="btn ghost" href="mailto:yeasienahmed65@gmail.com">Get in touch <span>↗</span></a></div>
-      </div>
-      <aside class="hero-card reveal">
-        <div class="avatar" aria-label="Joy monogram">J.</div>
-        <h2>Yeasien Ahmed</h2><div class="role">JOY · Learner & Builder</div>
-        <div class="line"></div>
-        <div class="quick"><span>Currently</span><span>Statistics Undergraduate</span></div>
-        <div class="quick"><span>University</span><span>Dhaka Central University</span></div>
-        <div class="quick"><span>Campus</span><span>Titumir Campus</span></div>
-        <div class="quick"><span>Focus</span><span>Data · Code · Creativity</span></div>
-        <div class="line"></div><div class="eyebrow">FIND YOUR OWN PATH</div>
-      </aside>
-    </div>
-    <section id="about"><div class="wrap">
-      <div class="section-head reveal"><div><div class="eyebrow">01 / A little introduction</div><h2>About me</h2></div><p>I like learning by experimenting, asking questions, and turning ideas into something tangible.</p></div>
-      <div class="grid">
-        <article class="card reveal"><div class="symbol">WHO I AM</div><h3>Always exploring</h3><p>I'm currently studying Statistics at Dhaka Central University, Titumir Campus. I enjoy connecting analytical thinking with creativity and practical problem-solving.</p></article>
-        <article class="card reveal"><div class="symbol">MY APPROACH</div><h3>Learn. Build. Improve.</h3><p>I believe meaningful progress comes from curiosity, consistent practice, and the willingness to start from the basics and keep going.</p></article>
-      </div>
-    </div></section>
-    <section id="interests"><div class="wrap">
-      <div class="section-head reveal"><div><div class="eyebrow">02 / Beyond the classroom</div><h2>Things I love</h2></div><p>Different interests give me different ways to observe the world and tell its stories.</p></div>
-      <div class="interest-grid">
-        <div class="interest reveal"><strong>⌘ Programming</strong><span>Building and problem-solving</span></div>
-        <div class="interest reveal"><strong>✎ Writing</strong><span>Ideas, words and expression</span></div>
-        <div class="interest reveal"><strong>◎ Photography</strong><span>Noticing details and moments</span></div>
-        <div class="interest reveal"><strong>▤ Reading</strong><span>Sci-fi and ancient books</span></div>
-      </div>
-    </div></section>
-    <section id="skills"><div class="wrap">
-      <div class="section-head reveal"><div><div class="eyebrow">03 / What I'm learning</div><h2>Learning journey</h2></div><p>I'm focused on building strong fundamentals rather than collecting labels. This is a learning-in-progress list.</p></div>
-      <div class="card reveal"><div class="symbol">CURRENT LEARNING AREAS</div><h3>Building a foundation for the future</h3><p>My academic and technical interests meet around statistics, computation, and understanding data.</p>
-        <div class="skill-list"><span class="skill">Statistics</span><span class="skill">Mathematics</span><span class="skill">Python</span><span class="skill">HTML & CSS</span><span class="skill">JavaScript</span><span class="skill">Excel</span><span class="skill">Data Analysis</span><span class="skill">Problem Solving</span></div>
-      </div>
-    </div></section>
-    <section id="projects"><div class="wrap">
-      <div class="section-head reveal"><div><div class="eyebrow">04 / Selected explorations</div><h2>Projects & ideas</h2></div><p>A few spaces where I'm experimenting with code, learning, and useful digital tools.</p></div>
-      <div class="grid">
-        <article class="card reveal"><div class="project-top"><div class="symbol">01 / STUDY</div><span class="status">IN PROGRESS</span></div><h3>FOCUS FLOW</h3><p>A study-focused timer and productivity experience exploring focused sessions, visual feedback, and progress tracking.</p><a class="project-link" href="https://github.com/NATIONVK/FOCUS-FLOW-3.0" target="_blank" rel="noopener noreferrer">View repository ↗</a></article>
-        <article class="card reveal"><div class="project-top"><div class="symbol">02 / DATA</div><span class="status">EXPLORATION</span></div><h3>STATSPHERE</h3><p>A concept for a practical statistics toolkit, bringing data learning and statistical utilities into one place.</p><a class="project-link" href="https://github.com/NATIONVK/STATSPHERE" target="_blank" rel="noopener noreferrer">View repository ↗</a></article>
-        <article class="card reveal"><div class="project-top"><div class="symbol">03 / CODING</div><span class="status">EXPLORATION</span></div><h3>PyCodeLab</h3><p>An idea for a mobile-friendly Python coding and learning environment.</p><a class="project-link" href="https://github.com/NATIONVK/PyCodeLab" target="_blank" rel="noopener noreferrer">View repository ↗</a></article>
-        <article class="card reveal"><div class="project-top"><div class="symbol">04 / PERSONAL</div><span class="status">CONCEPT</span></div><h3>StudentOS</h3><p>A student ecosystem concept for organizing study routines, notes, assignments, and learning progress.</p><a class="project-link" href="https://github.com/NATIONVK" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a></article>
-      </div>
-    </div></section>
-    <section><div class="wrap reveal"><div class="quote">“আমি যেমন, আমি তেমনি — আমি কোনো পরীক্ষার খাতা না।”<small>A thought I like to live by</small></div></div></section>
-    <section id="contact"><div class="wrap contact">
-      <div class="reveal"><div class="eyebrow">05 / Say hello</div><h2 style="font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.05;letter-spacing:-.06em;margin:12px 0">Let's make<br>something <span style="color:var(--cyan)">meaningful.</span></h2><p class="contact-copy">Have an idea, a project, or just want to connect? Feel free to reach out.</p></div>
-      <div class="contact-links reveal">
-        <a href="mailto:yeasienahmed65@gmail.com"><span>Email</span><span>↗</span></a>
-        <a href="https://github.com/NATIONVK" target="_blank" rel="noopener noreferrer"><span>GitHub · NATIONVK</span><span>↗</span></a>
-        <a href="https://www.facebook.com/profile.php?id=61564976211222" target="_blank" rel="noopener noreferrer"><span>Facebook</span><span>↗</span></a>
-      </div>
-    </div></section>
-  </main>
-  <footer><div class="wrap footer-inner"><span>© <span id="year"></span> <strong>YEASIEN AHMED</strong> · JOY</span><span class="mono">DESIGNED TO KEEP EXPLORING.</span></div></footer>
-  <script>
-    const menuBtn=document.getElementById('menuBtn');
-    const navLinks=document.getElementById('navLinks');
-    menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));});
-    navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}));
-    document.getElementById('year').textContent=new Date().getFullYear();
-    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}}),{threshold:.12});
-    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-  </script>
-</body>
-</html>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080817">
+<meta name="description" content="Yeasien Ahmed — Joy. A personal journey through curiosity, dreams, statistics, code and creativity.">
+<meta property="og:title" content="Joy — Beyond the Ordinary"><meta property="og:description" content="A little universe of dreams, ideas and things I'm building.">
+<title>Joy — Beyond the Ordinary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080817;--panel:#111329;--line:#ffffff1c;--text:#f3f1ff;--muted:#aaa8c5;--cyan:#7df4e5;--violet:#b49aff;--pink:#ff9bd5;--gold:#f4df9a}
+*{box-sizing:border-box}html{background:var(--bg)}body{margin:0;min-height:100vh;color:var(--text);font-family:Manrope,system-ui,sans-serif;background:radial-gradient(ellipse at 15% 10%,#28204a 0,transparent 38%),radial-gradient(ellipse at 90% 80%,#122b43 0,transparent 35%),var(--bg);overflow-x:hidden}
+#stars{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}.noise{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.2'/%3E%3C/svg%3E")}
+.shell{position:relative;z-index:2;width:min(920px,calc(100% - 32px));margin:auto;min-height:100vh;display:flex;flex-direction:column}.top{display:flex;justify-content:space-between;align-items:center;padding:24px 0}.logo{font:500 .8rem 'DM Mono';letter-spacing:.2em;color:var(--cyan)}.counter{font: .75rem 'DM Mono';color:var(--muted)}.progress{height:3px;background:#ffffff15;border-radius:9px;overflow:hidden}.bar{height:100%;width:14.28%;background:linear-gradient(90deg,var(--cyan),var(--violet),var(--pink));transition:width .55s cubic-bezier(.2,.8,.2,1)}
+main{flex:1;display:grid;place-items:center;padding:36px 0 24px}.page{display:none;width:100%;animation:enter .65s cubic-bezier(.2,.8,.2,1) both}.page.active{display:block}@keyframes enter{from{opacity:0;transform:translateY(24px) scale(.985);filter:blur(5px)}to{opacity:1;transform:none;filter:blur(0)}}
+.kicker{font: .72rem 'DM Mono';letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:18px}.hero{text-align:center;padding:38px 0}.hero h1{font-size:clamp(3.6rem,12vw,7.7rem);letter-spacing:-.09em;line-height:.92;margin:0}.gradient{background:linear-gradient(100deg,var(--cyan),#b5a5ff 55%,var(--pink));background-clip:text;color:transparent}.lead{color:var(--muted);font-size:clamp(1rem,2.5vw,1.15rem);max-width:620px;margin:28px auto 0;line-height:1.9}.scroll-hint{font: .7rem 'DM Mono';color:#8885a8;letter-spacing:.15em;margin-top:55px;animation:pulse 2s infinite}@keyframes pulse{50%{opacity:.35}}
+h2{font-size:clamp(2.3rem,7vw,4.8rem);letter-spacing:-.075em;line-height:1.02;margin:0 0 22px}p{color:var(--muted);line-height:1.85}.panel{padding:clamp(22px,5vw,40px);border:1px solid var(--line);border-radius:26px;background:linear-gradient(145deg,#ffffff0c,#ffffff04);box-shadow:0 24px 90px #0004;backdrop-filter:blur(14px)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:15px}.tile{padding:22px;border:1px solid var(--line);border-radius:18px;background:#ffffff08}.tile b{display:block;margin-bottom:8px}.tile small{color:var(--muted);line-height:1.7}.tag{display:inline-block;border:1px solid #7df4e544;color:var(--cyan);background:#7df4e50c;padding:8px 12px;border-radius:99px;font-size:.8rem;margin:5px}
+.orbit-wrap{height:220px;display:grid;place-items:center;position:relative;margin:10px 0 25px}.planet{width:115px;height:115px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#fff,#c5b5ff 18%,#654caa 50%,#14142d 75%);box-shadow:0 0 45px #b49aff88,0 0 110px #7df4e533;animation:float 5s ease-in-out infinite}.ring{position:absolute;width:230px;height:75px;border:2px solid #c8b5ff99;border-radius:50%;transform:rotate(-22deg);box-shadow:0 0 20px #b49aff55;animation:spin 12s linear infinite}@keyframes float{50%{transform:translateY(-12px)}}@keyframes spin{to{transform:rotate(338deg)}}
+.quote{font-size:clamp(1.4rem,4vw,2.3rem);line-height:1.5;letter-spacing:-.04em;color:#f2edff}.quote span{color:var(--pink)}.dream{position:relative;overflow:hidden}.dream:after{content:"✦";position:absolute;right:25px;top:15px;color:var(--gold);font-size:2rem;animation:twinkle 2s infinite}@keyframes twinkle{50%{opacity:.25;transform:scale(.7) rotate(30deg)}}
+.project{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:18px 0;border-bottom:1px solid var(--line)}.project:last-child{border:0}.project strong{display:block}.project small{color:var(--muted)}.project a{color:var(--cyan);text-decoration:none;font-size:.85rem;white-space:nowrap}
+.controls{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:22px 0 30px}.btn{min-height:48px;border:1px solid var(--line);border-radius:14px;padding:0 20px;background:#ffffff0b;color:var(--text);font:600 .88rem Manrope;cursor:pointer;transition:.25s}.btn:hover{transform:translateY(-3px);border-color:var(--cyan);box-shadow:0 8px 30px #7df4e522}.btn.next{background:linear-gradient(100deg,var(--cyan),#b8adff);color:#101022;border:0}.btn:disabled{opacity:.25;cursor:not-allowed;transform:none}.dots{display:flex;gap:7px}.dot{width:6px;height:6px;border-radius:10px;background:#ffffff30;transition:.3s}.dot.on{width:22px;background:var(--cyan)}
+footer{text-align:center;padding:0 0 20px;color:#777591;font: .68rem 'DM Mono';letter-spacing:.12em}
+@media(max-width:600px){.two{grid-template-columns:1fr}.top{padding:18px 0}.panel{border-radius:20px}.orbit-wrap{height:190px}.project{align-items:flex-start}.controls{padding-bottom:22px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style></head>
+<body><canvas id="stars"></canvas><div class="noise"></div>
+<div class="shell"><header class="top"><div class="logo">JOY / PERSONAL UNIVERSE</div><div class="counter" id="counter">01 — 07</div></header><div class="progress"><div class="bar" id="bar"></div></div>
+<main id="pages">
+<section class="page active hero"><div class="kicker">WELCOME TO MY LITTLE UNIVERSE</div><h1>Hi, I'm<br><span class="gradient">Joy.</span></h1><p class="lead">A curious mind wandering between numbers, code, creativity and dreams. This is not just a profile — it's a journey. Take a look around.</p><div class="scroll-hint">PRESS NEXT TO BEGIN THE JOURNEY ↓</div></section>
+<section class="page"><div class="kicker">01 / THE HUMAN BEHIND THE SCREEN</div><h2>More than a<br><span class="gradient">username.</span></h2><div class="panel"><p>I'm <b style="color:white">Yeasien Ahmed</b> — known as Joy. I'm a Statistics undergraduate at Dhaka Central University, Titumir Campus, Bangladesh. I enjoy exploring ideas, learning new things and turning curiosity into little experiments.</p><div class="two"><div class="tile"><b>My nature</b><small>Curious, imaginative and always asking “what if?”</small></div><div class="tile"><b>My mindset</b><small>Start with the basics. Keep learning. Keep improving.</small></div></div></div></section>
+<section class="page"><div class="kicker">02 / MY DREAM SPACE</div><h2>Dreams are<br><span class="gradient">unfinished stars.</span></h2><div class="panel dream"><div class="orbit-wrap"><div class="ring"></div><div class="planet"></div></div><p class="quote">“One day, the things I imagine in silence will become <span>things I build in reality.</span>”</p><p>I dream of becoming someone who can use statistics, technology and research to understand real problems and create something meaningful. The destination may change; the curiosity stays.</p></div></section>
+<section class="page"><div class="kicker">03 / WHAT MAKES ME, ME</div><h2>Different paths.<br><span class="gradient">One curious mind.</span></h2><div class="two"><div class="tile"><b>⌘ Programming</b><small>Building, breaking, debugging and learning how things work.</small></div><div class="tile"><b>∑ Statistics</b><small>Finding patterns, asking questions and making sense of data.</small></div><div class="tile"><b>✎ Writing</b><small>Turning thoughts and feelings into words.</small></div><div class="tile"><b>◎ Photography</b><small>Noticing small details and capturing moments.</small></div><div class="tile"><b>▤ Reading</b><small>Sci-fi, ideas and stories from different worlds.</small></div><div class="tile"><b>✧ Exploring</b><small>Trying new tools, new concepts and new possibilities.</small></div></div></section>
+<section class="page"><div class="kicker">04 / THE LEARNING CONSTELLATION</div><h2>Still learning.<br><span class="gradient">Always growing.</span></h2><div class="panel"><p>My current learning map — built one concept at a time.</p><div><span class="tag">Statistics</span><span class="tag">Mathematics</span><span class="tag">Python</span><span class="tag">Data Analysis</span><span class="tag">HTML & CSS</span><span class="tag">JavaScript</span><span class="tag">Excel</span><span class="tag">Problem Solving</span></div><p>I'm especially interested in the meeting point of data, research and technology. I believe strong fundamentals matter more than rushing ahead.</p></div></section>
+<section class="page"><div class="kicker">05 / THINGS I'M BUILDING</div><h2>Ideas becoming<br><span class="gradient">real projects.</span></h2><div class="panel">
+<div class="project"><div><strong>FOCUS FLOW</strong><small>Study timer & focus experience</small></div><a href="https://github.com/NATIONVK/FOCUS-FLOW-3.0" target="_blank" rel="noopener">GitHub ↗</a></div>
+<div class="project"><div><strong>STATSPHERE</strong><small>Statistics toolkit concept</small></div><a href="https://github.com/NATIONVK/STATSPHERE" target="_blank" rel="noopener">GitHub ↗</a></div>
+<div class="project"><div><strong>PyCodeLab</strong><small>Mobile-friendly Python learning idea</small></div><a href="https://github.com/NATIONVK/PyCodeLab" target="_blank" rel="noopener">GitHub ↗</a></div>
+<div class="project"><div><strong>StudentOS</strong><small>A student learning ecosystem concept</small></div><a href="https://github.com/NATIONVK" target="_blank" rel="noopener">GitHub ↗</a></div></div></section>
+<section class="page"><div class="kicker">06 / UNTIL OUR NEXT HELLO</div><h2>Keep your<br><span class="gradient">own universe.</span></h2><div class="panel"><p class="quote">“আমি যেমন, আমি তেমনি —<br><span>আমি কোনো পরীক্ষার খাতা না।</span>”</p><p>Thanks for spending a little time in my world. Find your own path, stay curious, and never stop creating.</p><div class="two"><a class="tile" href="mailto:yeasienahmed65@gmail.com" style="text-decoration:none"><b>Email</b><small>yeasienahmed65@gmail.com ↗</small></a><a class="tile" href="https://github.com/NATIONVK" target="_blank" rel="noopener" style="text-decoration:none"><b>GitHub</b><small>@NATIONVK ↗</small></a><a class="tile" href="https://www.facebook.com/profile.php?id=61564976211222" target="_blank" rel="noopener" style="text-decoration:none"><b>Facebook</b><small>Connect with me ↗</small></a><div class="tile"><b>Made by Joy</b><small>FIND YOUR OWN PATH.</small></div></div></div></section>
+</main>
+<nav class="controls" aria-label="Page navigation"><button class="btn" id="prev" disabled>← Back</button><div class="dots" id="dots" aria-label="Page progress"></div><button class="btn next" id="next">Next →</button></nav>
+<footer>YEASIEN AHMED · JOY &nbsp; / &nbsp; <span id="year"></span></footer></div>
+<script>
+(()=>{const pages=[...document.querySelectorAll('.page')],prev=document.getElementById('prev'),next=document.getElementById('next'),bar=document.getElementById('bar'),counter=document.getElementById('counter'),dots=document.getElementById('dots');let current=0;
+pages.forEach((_,i)=>{const d=document.createElement('span');d.className='dot'+(i===0?' on':'');dots.appendChild(d);});
+function show(n){pages[current].classList.remove('active');current=Math.max(0,Math.min(pages.length-1,n));pages[current].classList.remove('active');void pages[current].offsetWidth;pages[current].classList.add('active');prev.disabled=current===0;next.textContent=current===pages.length-1?'Start again ↻':'Next →';bar.style.width=((current+1)/pages.length*100)+'%';counter.textContent=String(current+1).padStart(2,'0')+' — '+String(pages.length).padStart(2,'0');[...dots.children].forEach((d,i)=>d.classList.toggle('on',i===current));}
+prev.addEventListener('click',()=>show(current-1));next.addEventListener('click',()=>show(current===pages.length-1?0:current+1));document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();show(current===pages.length-1?0:current+1)}if(e.key==='ArrowLeft')show(current-1)});document.getElementById('year').textContent=new Date().getFullYear();
+const canvas=document.getElementById('stars'),ctx=canvas.getContext('2d');let w,h,stars=[];function resize(){w=canvas.width=innerWidth*devicePixelRatio;h=canvas.height=innerHeight*devicePixelRatio;stars=Array.from({length:Math.min(170,Math.floor(innerWidth/5))},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.5+.3,a:Math.random()*.7+.15,s:Math.random()*.18+.04}));}function draw(){ctx.clearRect(0,0,w,h);for(const p of stars){p.y-=p.s*devicePixelRatio;if(p.y<0)p.y=h;ctx.globalAlpha=p.a*(.6+.4*Math.sin(Date.now()*.001+p.x));ctx.fillStyle='#dcd8ff';ctx.beginPath();ctx.arc(p.x,p.y,p.r*devicePixelRatio,0,Math.PI*2);ctx.fill();}ctx.globalAlpha=1;requestAnimationFrame(draw);}resize();addEventListener('resize',resize);draw();
+})();
+</script></body></html>
