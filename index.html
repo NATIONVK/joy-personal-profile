@@ -62,6 +62,18 @@ footer{text-align:center;padding:0 0 20px;color:#777591;font: .68rem 'DM Mono';l
 .room-info strong{color:var(--cyan)}.room-info p{margin:7px 0 0;font-size:.9rem}
 @media(max-width:600px){.room-stage{height:285px}.room-desk{bottom:75px}.room-screen{bottom:93px}.room-plant{bottom:80px}.room-lamp{bottom:90px}.room-object[data-room="stats"]{bottom:137px}.room-object[data-room="code"]{bottom:138px}}
 
+
+/* STAR QUEST MINI EXPERIENCE */
+.quest-sky{position:relative;height:285px;overflow:hidden;border:1px solid #ffffff1c;border-radius:20px;background:radial-gradient(ellipse at 50% 50%,#302657,#11152c 68%,#090b1d)}
+.quest-star{position:absolute;width:48px;height:48px;border:1px solid #f4df9a66;border-radius:50%;background:#f4df9a12;color:#ffe9a8;font-size:1.35rem;cursor:pointer;box-shadow:0 0 18px #f4df9a33;transition:transform .25s,background .25s,opacity .25s}
+.quest-star:hover{transform:scale(1.18);background:#f4df9a33}
+.quest-star.found{opacity:.3;transform:scale(.72);pointer-events:none;box-shadow:none}
+.quest-star:focus-visible{outline:2px solid var(--cyan);outline-offset:4px}
+.quest-star:nth-child(1){left:13%;top:22%}.quest-star:nth-child(2){left:43%;top:12%}.quest-star:nth-child(3){right:13%;top:28%}.quest-star:nth-child(4){left:27%;bottom:16%}.quest-star:nth-child(5){right:28%;bottom:13%}
+.quest-status{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:14px 0;color:var(--muted);font: .75rem 'DM Mono'}
+.quest-reward{padding:17px;border-radius:15px;border:1px solid #f4df9a55;background:#f4df9a0b;color:var(--gold);line-height:1.7}
+.quest-reward[hidden]{display:none}
+
 </style></head>
 <body><canvas id="stars"></canvas><div class="noise"></div>
 <div class="shell"><header class="top"><div class="logo">JOY / PERSONAL UNIVERSE</div><div class="counter" id="counter">01 — 07</div></header><div class="progress"><div class="bar" id="bar"></div></div>
@@ -95,6 +107,9 @@ footer{text-align:center;padding:0 0 20px;color:#777591;font: .68rem 'DM Mono';l
 
 <section class="page"><div class="kicker">10 / A ROOM INSIDE MY WORLD</div><h2>Welcome to my<br><span class="gradient">digital room.</span></h2><div class="panel"><p>Look around and tap an object. Each one opens a little window into what inspires me.</p><div class="room-stage" aria-label="Interactive illustration of a personal creative room"><div class="room-wall"></div><div class="room-window"></div><div class="room-floor"></div><div class="room-desk"></div><div class="room-screen"></div><div class="room-plant" aria-hidden="true">🪴</div><div class="room-lamp" aria-hidden="true">💡</div><button class="room-object" type="button" data-room="stats" aria-label="Explore statistics">∑</button><button class="room-object" type="button" data-room="code" aria-label="Explore coding">⌘</button><button class="room-object" type="button" data-room="dream" aria-label="Explore dreams">✦</button><button class="room-object" type="button" data-room="ideas" aria-label="Explore ideas">✎</button></div><div class="room-info" id="room-info" aria-live="polite"><strong>Choose something in the room</strong><p>Your discovery will appear here.</p></div></div></section>
 
+
+<section class="page"><div class="kicker">11 / THE LITTLE STAR QUEST</div><h2>Collect a little<br><span class="gradient">bit of wonder.</span></h2><div class="panel"><p>Five stars are hiding in this tiny sky. Tap each one to collect it and unlock a final message.</p><div class="quest-sky" id="quest-sky" aria-label="Star collection mini game"><button class="quest-star" type="button" aria-label="Collect star 1">✦</button><button class="quest-star" type="button" aria-label="Collect star 2">✦</button><button class="quest-star" type="button" aria-label="Collect star 3">✦</button><button class="quest-star" type="button" aria-label="Collect star 4">✦</button><button class="quest-star" type="button" aria-label="Collect star 5">✦</button></div><div class="quest-status"><span id="quest-count" aria-live="polite">STARS FOUND: 0 / 5</span><button class="btn" id="quest-reset" type="button">Reset stars ↻</button></div><div class="quest-reward" id="quest-reward" hidden>✧ You found them all. Remember: even the darkest sky has something worth discovering. Keep looking up — and keep finding your own path.</div></div></section>
+
 </main>
 <nav class="controls" aria-label="Page navigation"><button class="btn" id="prev" disabled>← Back</button><div class="dots" id="dots" aria-label="Page progress"></div><button class="btn next" id="next">Next →</button></nav>
 <footer>YEASIEN AHMED · JOY &nbsp; / &nbsp; <span id="year"></span></footer></div>
@@ -110,6 +125,12 @@ const universe=document.getElementById('universe');if(universe&&!matchMedia('(pr
 
 const roomNotes={stats:["Statistics","I enjoy finding patterns in data and learning how numbers can explain real-world questions."],code:["Programming","I like experimenting with code, solving bugs and building small tools that make ideas tangible."],dream:["Dreams","My long-term direction is to connect statistics, research and technology to create meaningful impact."],ideas:["Ideas & creativity","Curiosity is my starting point. I collect questions, explore possibilities and turn thoughts into experiments."]};
 document.querySelectorAll('.room-object').forEach(button=>button.addEventListener('click',()=>{const note=roomNotes[button.dataset.room];const box=document.getElementById('room-info');box.innerHTML='<strong>'+note[0]+'</strong><p>'+note[1]+'</p>';document.querySelectorAll('.room-object').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));}));
+
+
+const questStars=[...document.querySelectorAll('.quest-star')],questCount=document.getElementById('quest-count'),questReward=document.getElementById('quest-reward');
+function updateQuest(){const count=questStars.filter(x=>x.classList.contains('found')).length;questCount.textContent='STARS FOUND: '+count+' / 5';questReward.hidden=count!==5;}
+questStars.forEach(star=>star.addEventListener('click',()=>{star.classList.add('found');star.setAttribute('aria-pressed','true');updateQuest();}));
+document.getElementById('quest-reset').addEventListener('click',()=>{questStars.forEach(star=>{star.classList.remove('found');star.setAttribute('aria-pressed','false');});updateQuest();});
 
 const canvas=document.getElementById('stars'),ctx=canvas.getContext('2d');let w,h,stars=[];function resize(){w=canvas.width=innerWidth*devicePixelRatio;h=canvas.height=innerHeight*devicePixelRatio;stars=Array.from({length:Math.min(170,Math.floor(innerWidth/5))},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.5+.3,a:Math.random()*.7+.15,s:Math.random()*.18+.04}));}function draw(){ctx.clearRect(0,0,w,h);for(const p of stars){p.y-=p.s*devicePixelRatio;if(p.y<0)p.y=h;ctx.globalAlpha=p.a*(.6+.4*Math.sin(Date.now()*.001+p.x));ctx.fillStyle='#dcd8ff';ctx.beginPath();ctx.arc(p.x,p.y,p.r*devicePixelRatio,0,Math.PI*2);ctx.fill();}ctx.globalAlpha=1;requestAnimationFrame(draw);}resize();addEventListener('resize',resize);draw();show(0);
 })();
