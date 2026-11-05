@@ -45,6 +45,23 @@ footer{text-align:center;padding:0 0 20px;color:#777591;font: .68rem 'DM Mono';l
 .memory-card .secret[hidden]{display:none}.memory-card .hint{font: .67rem 'DM Mono';color:var(--pink);letter-spacing:.1em}
 @media(max-width:600px){.memory-grid{grid-template-columns:1fr}.universe{height:245px}}
 
+
+/* INTERACTIVE DIGITAL ROOM */
+.room-stage{height:330px;position:relative;perspective:850px;display:grid;place-items:center;overflow:hidden;border-radius:20px;background:radial-gradient(ellipse at 50% 80%,#34305c88,transparent 65%),linear-gradient(145deg,#11152c,#17132b 55%,#101b2a)}
+.room-floor{position:absolute;bottom:-75px;width:115%;height:190px;background:repeating-linear-gradient(90deg,#ffffff0b 0 1px,transparent 1px 48px),repeating-linear-gradient(0deg,#ffffff0b 0 1px,transparent 1px 48px);transform:rotateX(68deg);transform-origin:top;box-shadow:0 -20px 60px #0005}
+.room-wall{position:absolute;top:0;width:100%;height:68%;background:linear-gradient(120deg,#ffffff08,transparent 55%),linear-gradient(#252345aa,#17182e99);border-bottom:1px solid #b49aff44}
+.room-window{position:absolute;top:28px;right:13%;width:28%;height:115px;border:5px solid #4d4778;border-radius:8px;background:radial-gradient(circle at 60% 30%,#fff8d788 0 2px,transparent 4px),radial-gradient(circle at 25% 65%,#7df4e5aa 0 1px,transparent 3px),linear-gradient(145deg,#10172f,#3c3972 65%,#17162e);box-shadow:0 0 30px #9c8cff55}
+.room-desk{position:absolute;bottom:87px;left:17%;width:43%;height:14px;background:linear-gradient(90deg,#78649e,#c5a9d7,#685888);transform:skewY(-7deg);box-shadow:0 12px 0 #302943,0 18px 25px #0008}
+.room-screen{position:absolute;bottom:105px;left:29%;width:19%;height:83px;border:5px solid #555174;border-radius:8px;background:radial-gradient(circle at center,#7df4e555,transparent 65%),#101326;box-shadow:0 0 22px #7df4e533}
+.room-plant{position:absolute;bottom:95px;right:17%;font-size:3.2rem;filter:drop-shadow(0 8px 8px #0008)}
+.room-lamp{position:absolute;bottom:105px;left:9%;font-size:2.6rem;filter:drop-shadow(0 0 18px #f4df9a66)}
+.room-object{position:absolute;z-index:3;min-width:44px;min-height:44px;border:1px solid #ffffff55;border-radius:50%;background:#17152dcc;color:white;font-size:1.2rem;cursor:pointer;box-shadow:0 0 18px #b49aff33;transition:.2s}
+.room-object:hover,.room-object:focus-visible{transform:scale(1.14);border-color:var(--cyan);outline:none;box-shadow:0 0 24px #7df4e588}
+.room-object[data-room="stats"]{left:34%;bottom:151px}.room-object[data-room="code"]{left:48%;bottom:152px}.room-object[data-room="dream"]{right:20%;top:42px}.room-object[data-room="ideas"]{left:11%;top:48px}
+.room-info{min-height:115px;margin-top:14px;padding:18px;border:1px solid var(--line);border-radius:16px;background:#ffffff08}
+.room-info strong{color:var(--cyan)}.room-info p{margin:7px 0 0;font-size:.9rem}
+@media(max-width:600px){.room-stage{height:285px}.room-desk{bottom:75px}.room-screen{bottom:93px}.room-plant{bottom:80px}.room-lamp{bottom:90px}.room-object[data-room="stats"]{bottom:137px}.room-object[data-room="code"]{bottom:138px}}
+
 </style></head>
 <body><canvas id="stars"></canvas><div class="noise"></div>
 <div class="shell"><header class="top"><div class="logo">JOY / PERSONAL UNIVERSE</div><div class="counter" id="counter">01 — 07</div></header><div class="progress"><div class="bar" id="bar"></div></div>
@@ -75,6 +92,9 @@ footer{text-align:center;padding:0 0 20px;color:#777591;font: .68rem 'DM Mono';l
 <button class="memory-card" type="button" aria-expanded="false"><span class="hint">✦ OPEN NOTE 04</span><b style="display:block;margin-top:9px">When I forget why I started</b><span class="secret" hidden>Stay curious. Make meaningful things. Find your own path.</span></button>
 </div></div></section>
 
+
+<section class="page"><div class="kicker">10 / A ROOM INSIDE MY WORLD</div><h2>Welcome to my<br><span class="gradient">digital room.</span></h2><div class="panel"><p>Look around and tap an object. Each one opens a little window into what inspires me.</p><div class="room-stage" aria-label="Interactive illustration of a personal creative room"><div class="room-wall"></div><div class="room-window"></div><div class="room-floor"></div><div class="room-desk"></div><div class="room-screen"></div><div class="room-plant" aria-hidden="true">🪴</div><div class="room-lamp" aria-hidden="true">💡</div><button class="room-object" type="button" data-room="stats" aria-label="Explore statistics">∑</button><button class="room-object" type="button" data-room="code" aria-label="Explore coding">⌘</button><button class="room-object" type="button" data-room="dream" aria-label="Explore dreams">✦</button><button class="room-object" type="button" data-room="ideas" aria-label="Explore ideas">✎</button></div><div class="room-info" id="room-info" aria-live="polite"><strong>Choose something in the room</strong><p>Your discovery will appear here.</p></div></div></section>
+
 </main>
 <nav class="controls" aria-label="Page navigation"><button class="btn" id="prev" disabled>← Back</button><div class="dots" id="dots" aria-label="Page progress"></div><button class="btn next" id="next">Next →</button></nav>
 <footer>YEASIEN AHMED · JOY &nbsp; / &nbsp; <span id="year"></span></footer></div>
@@ -86,6 +106,10 @@ prev.addEventListener('click',()=>show(current-1));next.addEventListener('click'
 
 document.querySelectorAll('.memory-card').forEach(card=>card.addEventListener('click',()=>{const secret=card.querySelector('.secret');const open=secret.hidden;secret.hidden=!open;card.setAttribute('aria-expanded',String(open));card.querySelector('.hint').textContent=open?'✦ NOTE REVEALED':'✦ OPEN NOTE';}));
 const universe=document.getElementById('universe');if(universe&&!matchMedia('(prefers-reduced-motion: reduce)').matches){universe.addEventListener('pointermove',e=>{const r=universe.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5;const y=(e.clientY-r.top)/r.height-.5;universe.style.transform='rotateY('+(x*5)+'deg) rotateX('+(-y*5)+'deg)';});universe.addEventListener('pointerleave',()=>universe.style.transform='');}
+
+
+const roomNotes={stats:["Statistics","I enjoy finding patterns in data and learning how numbers can explain real-world questions."],code:["Programming","I like experimenting with code, solving bugs and building small tools that make ideas tangible."],dream:["Dreams","My long-term direction is to connect statistics, research and technology to create meaningful impact."],ideas:["Ideas & creativity","Curiosity is my starting point. I collect questions, explore possibilities and turn thoughts into experiments."]};
+document.querySelectorAll('.room-object').forEach(button=>button.addEventListener('click',()=>{const note=roomNotes[button.dataset.room];const box=document.getElementById('room-info');box.innerHTML='<strong>'+note[0]+'</strong><p>'+note[1]+'</p>';document.querySelectorAll('.room-object').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));}));
 
 const canvas=document.getElementById('stars'),ctx=canvas.getContext('2d');let w,h,stars=[];function resize(){w=canvas.width=innerWidth*devicePixelRatio;h=canvas.height=innerHeight*devicePixelRatio;stars=Array.from({length:Math.min(170,Math.floor(innerWidth/5))},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.5+.3,a:Math.random()*.7+.15,s:Math.random()*.18+.04}));}function draw(){ctx.clearRect(0,0,w,h);for(const p of stars){p.y-=p.s*devicePixelRatio;if(p.y<0)p.y=h;ctx.globalAlpha=p.a*(.6+.4*Math.sin(Date.now()*.001+p.x));ctx.fillStyle='#dcd8ff';ctx.beginPath();ctx.arc(p.x,p.y,p.r*devicePixelRatio,0,Math.PI*2);ctx.fill();}ctx.globalAlpha=1;requestAnimationFrame(draw);}resize();addEventListener('resize',resize);draw();
 })();
